@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @bmkg.tanggal %>
+</p>
+
+<p>
+  <strong>Suhu min:</strong>
+  <%= @bmkg.suhu_min %>
+</p>
+
+<p>
+  <strong>Suhu max:</strong>
+  <%= @bmkg.suhu_max %>
+</p>
+
+<p>
+  <strong>Suhu rata:</strong>
+  <%= @bmkg.suhu_rata %>
+</p>
+
+<p>
+  <strong>Kelembaban rata:</strong>
+  <%= @bmkg.kelembaban_rata %>
+</p>
+
+<p>
+  <strong>Curah hujan:</strong>
+  <%= @bmkg.curah_hujan %>
+</p>
+
+<p>
+  <strong>Lama penyinaran:</strong>
+  <%= @bmkg.lama_penyinaran %>
+</p>
+
+<%= link_to 'Edit', edit_bmkg_path(@bmkg) %> |
+<%= link_to 'Back', bmkgs_path %>

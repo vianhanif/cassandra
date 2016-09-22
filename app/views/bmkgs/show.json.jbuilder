@@ -1,0 +1,1 @@
+json.partial! "bmkgs/bmkg", bmkg: @bmkg

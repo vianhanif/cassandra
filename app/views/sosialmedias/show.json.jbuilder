@@ -1,0 +1,1 @@
+json.partial! "sosialmedias/sosialmedia", sosialmedia: @sosialmedia

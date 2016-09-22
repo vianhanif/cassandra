@@ -1,0 +1,1 @@
+json.partial! "kabupatens/kabupaten", kabupaten: @kabupaten

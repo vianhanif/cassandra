@@ -1,0 +1,1 @@
+json.array! @kabupatens, partial: 'kabupatens/kabupaten', as: :kabupaten

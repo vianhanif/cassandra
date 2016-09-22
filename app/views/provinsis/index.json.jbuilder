@@ -1,0 +1,1 @@
+json.array! @provinsis, partial: 'provinsis/provinsi', as: :provinsi

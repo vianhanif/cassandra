@@ -1,0 +1,2 @@
+class Bencana < ApplicationRecord
+end
