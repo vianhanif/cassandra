@@ -1,24 +1,6 @@
-# README
+to do
+bikin importer dari csv/xls http://railscasts.com/episodes/396-importing-csv-and-excel
+sebnernya gua bisa cuma masa gua smua yang ngerjain wakwkakwa
+soalnya bapaknya nanya bagian apa aja yang dikerjain ntar kalo gua smua gua maruk dong wakkwakwa
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+please smua merge lewat pull request ok
