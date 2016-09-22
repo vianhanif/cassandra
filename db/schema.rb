@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922153546) do
+ActiveRecord::Schema.define(version: 20160922162235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,8 +70,18 @@ ActiveRecord::Schema.define(version: 20160922153546) do
     t.index ["bencana_id"], name: "index_sosialmedias_on_bencana_id", using: :btree
   end
 
+  create_table "twitters", force: :cascade do |t|
+    t.date     "tanggal"
+    t.text     "post"
+    t.integer  "bencana_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bencana_id"], name: "index_twitters_on_bencana_id", using: :btree
+  end
+
   add_foreign_key "bnpbs", "bencanas"
   add_foreign_key "bnpbs", "kabupatens"
   add_foreign_key "kabupatens", "provinsis"
   add_foreign_key "sosialmedias", "bencanas"
+  add_foreign_key "twitters", "bencanas"
 end
