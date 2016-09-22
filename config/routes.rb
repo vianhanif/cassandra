@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :twitters
   resources :bnpbs
   resources :bmkgs
   resources :sosialmedias
