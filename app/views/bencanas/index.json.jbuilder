@@ -1,0 +1,1 @@
+json.array! @bencanas, partial: 'bencanas/bencana', as: :bencana

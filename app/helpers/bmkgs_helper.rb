@@ -1,0 +1,2 @@
+module BmkgsHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @kabupaten.nama %>
+</p>
+
+<p>
+  <strong>Provinsi:</strong>
+  <%= @kabupaten.provinsi %>
+</p>
+
+<%= link_to 'Edit', edit_kabupaten_path(@kabupaten) %> |
+<%= link_to 'Back', kabupatens_path %>

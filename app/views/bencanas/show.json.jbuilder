@@ -1,0 +1,1 @@
+json.partial! "bencanas/bencana", bencana: @bencana

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bnpbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tanggal</th>
+      <th>Bencana</th>
+      <th>Kabupaten</th>
+      <th>Korban meninggal</th>
+      <th>Korban hilang</th>
+      <th>Korban luka</th>
+      <th>Korban mengungsi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bnpbs.each do |bnpb| %>
+      <tr>
+        <td><%= bnpb.tanggal %></td>
+        <td><%= bnpb.bencana %></td>
+        <td><%= bnpb.kabupaten %></td>
+        <td><%= bnpb.korban_meninggal %></td>
+        <td><%= bnpb.korban_hilang %></td>
+        <td><%= bnpb.korban_luka %></td>
+        <td><%= bnpb.korban_mengungsi %></td>
+        <td><%= link_to 'Show', bnpb %></td>
+        <td><%= link_to 'Edit', edit_bnpb_path(bnpb) %></td>
+        <td><%= link_to 'Destroy', bnpb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bnpb', new_bnpb_path %>

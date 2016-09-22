@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tanggal: 2016-09-22
+  bencana: one
+  kabupaten: one
+  korban_meninggal: 1
+  korban_hilang: 1
+  korban_luka: 1
+  korban_mengungsi: 1
+
+two:
+  tanggal: 2016-09-22
+  bencana: two
+  kabupaten: two
+  korban_meninggal: 1
+  korban_hilang: 1
+  korban_luka: 1
+  korban_mengungsi: 1

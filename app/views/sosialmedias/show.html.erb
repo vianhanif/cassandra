@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @sosialmedia.tanggal %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @sosialmedia.link %>
+</p>
+
+<p>
+  <strong>Bencana:</strong>
+  <%= @sosialmedia.bencana %>
+</p>
+
+<%= link_to 'Edit', edit_sosialmedia_path(@sosialmedia) %> |
+<%= link_to 'Back', sosialmedias_path %>

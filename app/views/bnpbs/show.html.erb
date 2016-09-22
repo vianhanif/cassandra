@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @bnpb.tanggal %>
+</p>
+
+<p>
+  <strong>Bencana:</strong>
+  <%= @bnpb.bencana %>
+</p>
+
+<p>
+  <strong>Kabupaten:</strong>
+  <%= @bnpb.kabupaten %>
+</p>
+
+<p>
+  <strong>Korban meninggal:</strong>
+  <%= @bnpb.korban_meninggal %>
+</p>
+
+<p>
+  <strong>Korban hilang:</strong>
+  <%= @bnpb.korban_hilang %>
+</p>
+
+<p>
+  <strong>Korban luka:</strong>
+  <%= @bnpb.korban_luka %>
+</p>
+
+<p>
+  <strong>Korban mengungsi:</strong>
+  <%= @bnpb.korban_mengungsi %>
+</p>
+
+<%= link_to 'Edit', edit_bnpb_path(@bnpb) %> |
+<%= link_to 'Back', bnpbs_path %>

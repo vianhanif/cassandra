@@ -1,0 +1,1 @@
+json.array! @bnpbs, partial: 'bnpbs/bnpb', as: :bnpb

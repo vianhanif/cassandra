@@ -1,0 +1,1 @@
+json.array! @sosialmedias, partial: 'sosialmedias/sosialmedia', as: :sosialmedia

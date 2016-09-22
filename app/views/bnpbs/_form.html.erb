@@ -1,0 +1,17 @@
+<%= simple_form_for(@bnpb) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :tanggal %>
+    <%= f.association :bencana %>
+    <%= f.association :kabupaten %>
+    <%= f.input :korban_meninggal %>
+    <%= f.input :korban_hilang %>
+    <%= f.input :korban_luka %>
+    <%= f.input :korban_mengungsi %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

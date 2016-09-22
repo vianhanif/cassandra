@@ -1,0 +1,1 @@
+json.partial! "provinsis/provinsi", provinsi: @provinsi
