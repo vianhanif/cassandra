@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :polds
   resources :stasiuns
   resources :keywords
