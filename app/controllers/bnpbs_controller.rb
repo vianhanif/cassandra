@@ -1,6 +1,10 @@
 class BnpbsController < ApplicationController
   before_action :set_bnpb, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Bnpbs.import(params[:file])
+    redirect_to bnpbs_path, notice: "BNPB imported."
+  end
   # GET /bnpbs
   # GET /bnpbs.json
   def index

@@ -2,8 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :polds
-  resources :stasiuns
-  resources :keywords
+
   root 'static_pages#home'
 
   get  '/informasi',    to: 'static_pages#informasi'
@@ -12,11 +11,33 @@ Rails.application.routes.draw do
   get  '/info',         to: 'static_pages#info'
   get  '/about',        to: 'static_pages#about'
 
-  resources :bnpbs
-  resources :bmkgs
-  resources :sosialmedias
-  resources :twitters
-  resources :kabupatens
-  resources :provinsis
-  resources :bencanas
+  resources :stasiuns do
+    collection { post :import }
+  end
+  resources :keywords do
+    collection { post :import }
+  end
+  resources :bnpbs do
+    collection { post :import }
+  end
+  resources :bmkgs do
+    collection { post :import }
+  end
+  resources :sosialmedias do
+    collection { post :import }
+  end
+  resources :twitters do
+    collection { post :import }
+  end
+  resources :kabupatens do
+    collection { post :import }
+  end
+  resources :provinsis do
+    collection { post :import }
+  end
+
+  resources :bencanas do 
+    collection { post :import }
+  end
+
 end

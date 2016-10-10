@@ -1,5 +1,10 @@
 class ProvinsisController < ApplicationController
   before_action :set_provinsi, only: [:show, :edit, :update, :destroy]
+  
+  def import 
+    Provinsi.import(params[:file])
+    redirect_to provinsis_path, notice: "Provinsi imported."
+  end
 
   # GET /provinsis
   # GET /provinsis.json

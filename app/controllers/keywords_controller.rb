@@ -1,6 +1,10 @@
 class KeywordsController < ApplicationController
   before_action :set_keyword, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Keyword.import(params[:file])
+    redirect_to keywords_path, notice: "Keyword imported."
+  end
   # GET /keywords
   # GET /keywords.json
   def index

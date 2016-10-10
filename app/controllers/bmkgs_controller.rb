@@ -1,6 +1,10 @@
 class BmkgsController < ApplicationController
   before_action :set_bmkg, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Bmkg.import(params[:file])
+    redirect_to bmkgs_path, notice: "BMKG imported."
+  end
   # GET /bmkgs
   # GET /bmkgs.json
   def index
