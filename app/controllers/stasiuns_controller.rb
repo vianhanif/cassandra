@@ -1,6 +1,11 @@
 class StasiunsController < ApplicationController
   before_action :set_stasiun, only: [:show, :edit, :update, :destroy]
 
+
+  def import
+    Stasiun.import(params[:file])
+    redirect_to stasiuns_path, notice: "Stasiun imported."
+  end
   # GET /stasiuns
   # GET /stasiuns.json
   def index

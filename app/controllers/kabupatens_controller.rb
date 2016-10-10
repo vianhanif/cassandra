@@ -1,6 +1,10 @@
 class KabupatensController < ApplicationController
   before_action :set_kabupaten, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Kabupaten.import(params[:file])
+    redirect_to kabupatens_path, notice: "Kabupaten imported."
+  end
   # GET /kabupatens
   # GET /kabupatens.json
   def index

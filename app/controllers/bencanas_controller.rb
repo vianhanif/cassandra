@@ -1,6 +1,10 @@
 class BencanasController < ApplicationController
   before_action :set_bencana, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Bencana.import(params[:file])
+    redirect_to bencanas_path, notice: "Bencana imported."
+  end
   # GET /bencanas
   # GET /bencanas.json
   def index

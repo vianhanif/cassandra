@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Import Products</h2>
+<%= form_tag import_bnpbs_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
 <h1>Bnpbs</h1>
 
 <table>

@@ -1,6 +1,11 @@
 class SosialmediasController < ApplicationController
   before_action :set_sosialmedia, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Sosialmedia.import(params[:file])
+    redirect_to sosialmedias_path, notice: "Sosial Media imported."
+  end
+
   # GET /sosialmedias
   # GET /sosialmedias.json
   def index

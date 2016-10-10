@@ -1,6 +1,10 @@
 class TwittersController < ApplicationController
   before_action :set_twitter, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Twitter.import(params[:file])
+    redirect_to twitters_path, notice: "Twitter imported."
+  end
   # GET /twitters
   # GET /twitters.json
   def index
