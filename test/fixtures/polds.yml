@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  h1: 1
+  h2: 1
+  h3: 1
+  h4: 1
+  h5: 1
+  h6: 1
+  h7: 1
+  pola: 1
+  keterangan: 1
+
+two:
+  h1: 1
+  h2: 1
+  h3: 1
+  h4: 1
+  h5: 1
+  h6: 1
+  h7: 1
+  pola: 1
+  keterangan: 1

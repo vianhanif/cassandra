@@ -1,0 +1,1 @@
+json.partial! "stasiuns/stasiun", stasiun: @stasiun

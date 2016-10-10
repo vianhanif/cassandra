@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stasiuns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Provinsi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stasiuns.each do |stasiun| %>
+      <tr>
+        <td><%= stasiun.nama %></td>
+        <td><%= stasiun.provinsi %></td>
+        <td><%= link_to 'Show', stasiun %></td>
+        <td><%= link_to 'Edit', edit_stasiun_path(stasiun) %></td>
+        <td><%= link_to 'Destroy', stasiun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stasiun', new_stasiun_path %>

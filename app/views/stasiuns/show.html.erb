@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @stasiun.nama %>
+</p>
+
+<p>
+  <strong>Provinsi:</strong>
+  <%= @stasiun.provinsi %>
+</p>
+
+<%= link_to 'Edit', edit_stasiun_path(@stasiun) %> |
+<%= link_to 'Back', stasiuns_path %>

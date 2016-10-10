@@ -1,0 +1,1 @@
+json.array! @stasiuns, partial: 'stasiuns/stasiun', as: :stasiun
