@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922162235) do
+ActiveRecord::Schema.define(version: 20161010062729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,28 @@ ActiveRecord::Schema.define(version: 20160922162235) do
     t.index ["provinsi_id"], name: "index_kabupatens_on_provinsi_id", using: :btree
   end
 
+  create_table "keywords", force: :cascade do |t|
+    t.string   "nama"
+    t.integer  "bencana_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bencana_id"], name: "index_keywords_on_bencana_id", using: :btree
+  end
+
+  create_table "polds", force: :cascade do |t|
+    t.integer  "h1"
+    t.integer  "h2"
+    t.integer  "h3"
+    t.integer  "h4"
+    t.integer  "h5"
+    t.integer  "h6"
+    t.integer  "h7"
+    t.integer  "pola"
+    t.integer  "keterangan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "provinsis", force: :cascade do |t|
     t.string   "nama"
     t.datetime "created_at", null: false
@@ -70,6 +92,14 @@ ActiveRecord::Schema.define(version: 20160922162235) do
     t.index ["bencana_id"], name: "index_sosialmedias_on_bencana_id", using: :btree
   end
 
+  create_table "stasiuns", force: :cascade do |t|
+    t.string   "nama"
+    t.integer  "provinsi_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["provinsi_id"], name: "index_stasiuns_on_provinsi_id", using: :btree
+  end
+
   create_table "twitters", force: :cascade do |t|
     t.date     "tanggal"
     t.text     "post"
@@ -82,6 +112,8 @@ ActiveRecord::Schema.define(version: 20160922162235) do
   add_foreign_key "bnpbs", "bencanas"
   add_foreign_key "bnpbs", "kabupatens"
   add_foreign_key "kabupatens", "provinsis"
+  add_foreign_key "keywords", "bencanas"
   add_foreign_key "sosialmedias", "bencanas"
+  add_foreign_key "stasiuns", "provinsis"
   add_foreign_key "twitters", "bencanas"
 end
