@@ -1,0 +1,2 @@
+class Pold < ApplicationRecord
+end

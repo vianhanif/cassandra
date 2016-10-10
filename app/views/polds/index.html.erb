@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Polds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>H1</th>
+      <th>H2</th>
+      <th>H3</th>
+      <th>H4</th>
+      <th>H5</th>
+      <th>H6</th>
+      <th>H7</th>
+      <th>Pola</th>
+      <th>Keterangan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @polds.each do |pold| %>
+      <tr>
+        <td><%= pold.h1 %></td>
+        <td><%= pold.h2 %></td>
+        <td><%= pold.h3 %></td>
+        <td><%= pold.h4 %></td>
+        <td><%= pold.h5 %></td>
+        <td><%= pold.h6 %></td>
+        <td><%= pold.h7 %></td>
+        <td><%= pold.pola %></td>
+        <td><%= pold.keterangan %></td>
+        <td><%= link_to 'Show', pold %></td>
+        <td><%= link_to 'Edit', edit_pold_path(pold) %></td>
+        <td><%= link_to 'Destroy', pold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pold', new_pold_path %>

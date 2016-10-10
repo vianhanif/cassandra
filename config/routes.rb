@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :polds
+  resources :stasiuns
+  resources :keywords
   root 'static_pages#home'
 
   get  '/informasi',    to: 'static_pages#informasi'
