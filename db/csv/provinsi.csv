@@ -1,35 +1,35 @@
 id,nama
-12,"SUMATERA UTARA"
-32,"JAWA BARAT"
-74,"SULAWESI TENGGARA"
-33,"JAWA TENGAH"
-35,"JAWA TIMUR"
-11,"ACEH"
-63,"KALIMANTAN SELATAN"
-19,"BANGKA BELITUNG"
-51,"BALI"
-13,"SUMATERA BARAT"
-31,"DKI JAKARTA"
-52,"NUSA TENGGARA BARAT"
-71,"SULAWESI UTARA"
-17,"BENGKULU"
-34,"DI YOGYAKARTA"
-16,"SUMATERA SELATAN"
-62,"KALIMANTAN TENGAH"
-14,"RIAU"
-94,"PAPUA"
-72,"SULAWESI TENGAH"
-76,"SULAWESI BARAT"
-21,"KEPULAUAN RIAU"
-36,"BANTEN"
-64,"KALIMANTAN TIMUR"
-18,"LAMPUNG"
-61,"KALIMANTAN BARAT"
-15,"JAMBI"
-82,"MALUKU UTARA"
-73,"SULAWESI SELATAN"
-53,"NUSA TENGGARA TIMUR"
-81,"MALUKU"
-91,"PAPUA BARAT"
-75,"GORONTALO"
-65,"KALIMANTAN UTARA"
+11,Nanggroe Aceh Darussalam
+12,Sumatera Utara
+13,Sumatera Barat
+14,Riau
+15,Jambi
+16,Sumatera Selatan
+17,Bengkulu
+18,Lampung
+19,Kepulauan Bangka Belitung
+21,Kepulauan Riau
+31,DKI Jakarta
+32,Jawa Barat
+33,Jawa Tengah
+30,Banten
+35,Jawa Timur
+34,Dl Yogyakarta
+51,Bali
+52,Nusa Tenggara Barat
+53,Nusa Tenggara Timur
+61,Kalimantan Barat
+62,Kalimantan Tengah
+63,Kalimantan Selatan
+64,Kalimantan Timur
+65,Kalimantan Utara
+71,Sulawesi Utara
+72,Sulawesi Tengah
+73,Sulawesi Selatan
+74,Sulawesi Tenggara
+70,Gorontalo
+76,Sulawesi Barat
+81,Maluku
+82,Maluku Utara
+85,Papua
+92,Papua Barat
