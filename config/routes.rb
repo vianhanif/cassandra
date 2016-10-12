@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :polas
   devise_for :users
-  resources :polds
 
   root 'static_pages#home'
 

@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  bnpb: one
   h1: 1
   h2: 1
   h3: 1
@@ -8,10 +9,11 @@ one:
   h5: 1
   h6: 1
   h7: 1
-  pola: 1
+  polanya: 1
   keterangan: 1
 
 two:
+  bnpb: two
   h1: 1
   h2: 1
   h3: 1
@@ -19,5 +21,5 @@ two:
   h5: 1
   h6: 1
   h7: 1
-  pola: 1
+  polanya: 1
   keterangan: 1

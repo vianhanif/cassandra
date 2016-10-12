@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010073723) do
+ActiveRecord::Schema.define(version: 20161012072847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20161010073723) do
     t.integer  "lama_penyinaran"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "stasiun_id"
+    t.index ["stasiun_id"], name: "index_bmkgs_on_stasiun_id", using: :btree
   end
 
   create_table "bnpbs", force: :cascade do |t|
@@ -61,6 +63,22 @@ ActiveRecord::Schema.define(version: 20161010073723) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bencana_id"], name: "index_keywords_on_bencana_id", using: :btree
+  end
+
+  create_table "polas", force: :cascade do |t|
+    t.integer  "bnpb_id"
+    t.integer  "h1"
+    t.integer  "h2"
+    t.integer  "h3"
+    t.integer  "h4"
+    t.integer  "h5"
+    t.integer  "h6"
+    t.integer  "h7"
+    t.integer  "polanya"
+    t.integer  "keterangan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bnpb_id"], name: "index_polas_on_bnpb_id", using: :btree
   end
 
   create_table "polds", force: :cascade do |t|
@@ -126,10 +144,12 @@ ActiveRecord::Schema.define(version: 20161010073723) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "bmkgs", "stasiuns"
   add_foreign_key "bnpbs", "bencanas"
   add_foreign_key "bnpbs", "kabupatens"
   add_foreign_key "kabupatens", "provinsis"
   add_foreign_key "keywords", "bencanas"
+  add_foreign_key "polas", "bnpbs"
   add_foreign_key "sosialmedias", "bencanas"
   add_foreign_key "stasiuns", "provinsis"
   add_foreign_key "twitters", "bencanas"

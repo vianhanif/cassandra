@@ -1,1 +1,0 @@
-json.array! @polds, partial: 'polds/pold', as: :pold
