@@ -1,44 +1,57 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          BMKGS
+          <%= link_to 'New BMKG', new_bmkg_path, class: 'pull-right' %>
+        </div>
+        <div class="panel-body table-responsive">
+          <%= form_tag import_bmkgs_path, multipart: true do %>
+          <ul class="list-inline">
+            <li>  <%= file_field_tag :file %></li>
+            <li style="transform: translateX(-90px);"><%= submit_tag "Import Data", class: 'btn btn-default'%></li>
+          </ul>
+          <% end %>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Suhu min</th>
+                <th>Suhu max</th>
+                <th>Suhu rata</th>
+                <th>Kelembaban rata</th>
+                <th>Curah hujan</th>
+                <th>Lama penyinaran</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
 
-<h2>Import Products</h2>
-<%= form_tag import_bmkgs_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
-<h1>Bmkgs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tanggal</th>
-      <th>Suhu min</th>
-      <th>Suhu max</th>
-      <th>Suhu rata</th>
-      <th>Kelembaban rata</th>
-      <th>Curah hujan</th>
-      <th>Lama penyinaran</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bmkgs.each do |bmkg| %>
-      <tr>
-        <td><%= bmkg.tanggal %></td>
-        <td><%= bmkg.suhu_min %></td>
-        <td><%= bmkg.suhu_max %></td>
-        <td><%= bmkg.suhu_rata %></td>
-        <td><%= bmkg.kelembaban_rata %></td>
-        <td><%= bmkg.curah_hujan %></td>
-        <td><%= bmkg.lama_penyinaran %></td>
-        <td><%= link_to 'Show', bmkg %></td>
-        <td><%= link_to 'Edit', edit_bmkg_path(bmkg) %></td>
-        <td><%= link_to 'Destroy', bmkg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Bmkg', new_bmkg_path %>
+            <tbody>
+              <% @bmkgs.each do |bmkg| %>
+                <tr>
+                  <td><%= bmkg.tanggal %></td>
+                  <td><%= bmkg.suhu_min %></td>
+                  <td><%= bmkg.suhu_max %></td>
+                  <td><%= bmkg.suhu_rata %></td>
+                  <td><%= bmkg.kelembaban_rata %></td>
+                  <td><%= bmkg.curah_hujan %></td>
+                  <td><%= bmkg.lama_penyinaran %></td>
+                  <td><%= link_to 'Show', bmkg %></td>
+                  <td><%= link_to 'Edit', edit_bmkg_path(bmkg) %></td>
+                  <td><%= link_to 'Destroy', bmkg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= will_paginate @bmkgs %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

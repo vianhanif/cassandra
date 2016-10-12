@@ -8,7 +8,7 @@ class BmkgsController < ApplicationController
   # GET /bmkgs
   # GET /bmkgs.json
   def index
-    @bmkgs = Bmkg.all
+    @bmkgs = Bmkg.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /bmkgs/1

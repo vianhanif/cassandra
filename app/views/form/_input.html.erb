@@ -1,0 +1,30 @@
+  <% if defined? type %>
+    <%=
+      case type
+      when 'search'
+          render 'form/search', width: width, name: name, caption: caption, placeholder: (placeholder if defined? placeholder), search: search
+        when 'date'
+          render 'form/date', width: width, form: form, name: name, caption: caption
+        when 'date-old'
+          render 'form/date_old', width: width, form: form, name: name, caption: caption
+        when 'money'
+          render 'form/money',  width: width, form: form, name: name, caption: caption
+        when 'textarea'
+          render 'form/textarea', width: width, form: form, name: name, caption: caption
+        when 'number'
+          render 'form/number', width: width, form: form, name: name, caption: caption
+        when 'checkbox'
+          render 'form/checkbox', width: width, form: form, name: name, caption: caption
+        when 'select'
+          render 'form/select', width: width, form: form, name: name, caption: caption, select: select, default: (default if defined? default), value: (value if defined? value), selected: (selected if defined? selected), disabled: (disabled if defined? disabled)
+        when 'image'
+          render 'form/image', width: width, form: form, name: name, caption: caption, data: data
+        when 'image-primary'
+          render 'form/imageprimary', width: width, form: form, name: name, caption: caption, data: data
+        when 'star'
+          render 'form/star', width: width, form: form, name: name, caption: caption
+        end
+    %>
+  <% else %>
+    <%= render 'form/text', width: width, form: form, name: name, caption: caption, placeholder: (placeholder if defined? placeholder), value: (value if defined? value)  %>
+  <% end %>

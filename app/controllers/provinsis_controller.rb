@@ -1,7 +1,7 @@
 class ProvinsisController < ApplicationController
   before_action :set_provinsi, only: [:show, :edit, :update, :destroy]
-  
-  def import 
+
+  def import
     Provinsi.import(params[:file])
     redirect_to provinsis_path, notice: "Provinsi imported."
   end
@@ -9,7 +9,7 @@ class ProvinsisController < ApplicationController
   # GET /provinsis
   # GET /provinsis.json
   def index
-    @provinsis = Provinsi.all
+    @provinsis = Provinsi.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /provinsis/1

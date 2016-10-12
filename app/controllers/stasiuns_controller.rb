@@ -9,7 +9,7 @@ class StasiunsController < ApplicationController
   # GET /stasiuns
   # GET /stasiuns.json
   def index
-    @stasiuns = Stasiun.all
+    @stasiuns = Stasiun.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /stasiuns/1
