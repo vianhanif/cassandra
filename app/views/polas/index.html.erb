@@ -1,51 +1,56 @@
-<p id="notice"><%= notice %></p>
-
-<h2>Import polas</h2>
-<%= form_tag import_polas_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
-
-<h1>Polas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Bnpb</th>
-      <th>H1</th>
-      <th>H2</th>
-      <th>H3</th>
-      <th>H4</th>
-      <th>H5</th>
-      <th>H6</th>
-      <th>H7</th>
-      <th>Polanya</th>
-      <th>Keterangan</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @polas.each do |pola| %>
-      <tr>
-        <td><%= pola.bnpb %></td>
-        <td><%= pola.h1 %></td>
-        <td><%= pola.h2 %></td>
-        <td><%= pola.h3 %></td>
-        <td><%= pola.h4 %></td>
-        <td><%= pola.h5 %></td>
-        <td><%= pola.h6 %></td>
-        <td><%= pola.h7 %></td>
-        <td><%= pola.polanya %></td>
-        <td><%= pola.keterangan %></td>
-        <td><%= link_to 'Show', pola %></td>
-        <td><%= link_to 'Edit', edit_pola_path(pola) %></td>
-        <td><%= link_to 'Destroy', pola, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Pola', new_pola_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          Polas
+          <%= link_to 'New Pola', new_pola_path, class: 'pull-right' %>
+        </div>
+        <div class="panel-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Bnpb</th>
+                <th>H1</th>
+                <th>H2</th>
+                <th>H3</th>
+                <th>H4</th>
+                <th>H5</th>
+                <th>H6</th>
+                <th>H7</th>
+                <th>Polanya</th>
+                <th>Keterangan</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @polas.each do |pola| %>
+                <tr>
+                  <td><%= pola.bnpb %></td>
+                  <td><%= pola.h1 %></td>
+                  <td><%= pola.h2 %></td>
+                  <td><%= pola.h3 %></td>
+                  <td><%= pola.h4 %></td>
+                  <td><%= pola.h5 %></td>
+                  <td><%= pola.h6 %></td>
+                  <td><%= pola.h7 %></td>
+                  <td><%= pola.polanya %></td>
+                  <td><%= pola.keterangan %></td>
+                  <td><%= link_to 'Show', pola %></td>
+                  <td><%= link_to 'Edit', edit_pola_path(pola) %></td>
+                  <td><%= link_to 'Destroy', pola, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= will_paginate @polas %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

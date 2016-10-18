@@ -1,0 +1,24 @@
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" role="navigation">
+  <ul class="nav navmenu-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="/bencanas">Manage Bencana</a></li>
+    <li><a href="/polas">Manage Pola</a></li>
+    <li><a href="/bnpbs">Manage Data BNPB</a></li>
+    <li><a href="/bmkgs">Manage Data BMKG</a></li>
+    <li><a href="/kabupatens">Manage Data Kabupaten</a></li>
+    <li><a href="/stasiuns">Manage Data Stasiun</a></li>
+    <li><a href="/provinsis">Manage Data Provinsi</a></li>
+    <li><a href="/keywords">Manage Data Keywords</a></li>
+    <li><a href="/sosialmedias">Manage Data Social Media</a></li>
+    <li><a href="/twitters">Manage Data Twitter</a></li>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+  </ul>
+</nav>
+<div class="navbar navbar-default navbar-fixed-top">
+  <a class="navbar-brand" href="#">Brand</a>
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>

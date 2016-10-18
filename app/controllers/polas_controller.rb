@@ -9,7 +9,7 @@ class PolasController < ApplicationController
   # GET /polas
   # GET /polas.json
   def index
-    @polas = Pola.all
+    @polas = Pola.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /polas/1

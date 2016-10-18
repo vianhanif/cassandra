@@ -27,8 +27,13 @@
             <li><%= link_to 'Sosial Media', sosialmedias_path %></li>
             <li><%= link_to 'Twitter', twitters_path %></li>
 
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <% if user_signed_in? %>
+              <li role="separator" class="divider"></li>
+              <li><a href="/users/sign_out">Log Out</a></li>
+            <% else %>
+              <li role="separator" class="divider"></li>
+              <li><a href="/users/sign_in">Log in</a></li>
+            <% end %>
           </ul>
         </li>
       </ul>

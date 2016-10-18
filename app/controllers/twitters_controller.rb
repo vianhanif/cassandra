@@ -8,7 +8,7 @@ class TwittersController < ApplicationController
   # GET /twitters
   # GET /twitters.json
   def index
-    @twitters = Twitter.all
+    @twitters = Twitter.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /twitters/1

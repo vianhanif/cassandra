@@ -8,7 +8,7 @@ class BnpbsController < ApplicationController
   # GET /bnpbs
   # GET /bnpbs.json
   def index
-    @bnpbs = Bnpb.all
+    @bnpbs = Bnpb.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /bnpbs/1

@@ -1,9 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nama:</strong>
-  <%= @bencana.nama %>
-</p>
-
-<%= link_to 'Edit', edit_bencana_path(@bencana) %> |
-<%= link_to 'Back', bencanas_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          <%= link_to 'Edit', edit_bencana_path(@bencana) %> |
+          <%= link_to 'Back', bencanas_path %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <label>Nama:</label>
+              <%= @bencana.nama %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

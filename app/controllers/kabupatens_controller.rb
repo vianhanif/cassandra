@@ -8,7 +8,7 @@ class KabupatensController < ApplicationController
   # GET /kabupatens
   # GET /kabupatens.json
   def index
-    @kabupatens = Kabupaten.all
+    @kabupatens = Kabupaten.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /kabupatens/1
