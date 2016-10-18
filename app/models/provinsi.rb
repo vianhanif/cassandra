@@ -1,4 +1,5 @@
 class Provinsi < ApplicationRecord
+  has_many :kabupatens
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|

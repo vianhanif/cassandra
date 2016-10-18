@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Import polas</h2>
+<%= form_tag import_polas_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
 <h1>Polas</h1>
 
 <table>

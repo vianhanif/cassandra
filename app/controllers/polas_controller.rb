@@ -1,6 +1,11 @@
 class PolasController < ApplicationController
   before_action :set_pola, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Pola.import(params[:file])
+    redirect_to polas_path, notice: "Pola imported."
+  end
+
   # GET /polas
   # GET /polas.json
   def index

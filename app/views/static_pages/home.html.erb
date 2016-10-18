@@ -1,1 +1,9 @@
-<h1>Lontong</h1>
+<h2> lontong </h2>
+
+<%= form_tag ramalan_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :provinsi, params[:provinsi] %>
+    <%= text_field_tag :bulan, params[:bulan] %>
+    <%= submit_tag "ramal" %>
+  </p>
+<% end %>
