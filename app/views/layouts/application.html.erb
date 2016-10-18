@@ -8,8 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
+    <%= render 'layouts/header' if !user_signed_in? %>
+    <%= render 'layouts/admin_header' if user_signed_in? %>
+    <div class="container <%= user_signed_in? ? 'admin-page' : 'user-page'%>">
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
     </div>

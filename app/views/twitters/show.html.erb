@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tanggal:</strong>
-  <%= @twitter.tanggal %>
-</p>
-
-<p>
-  <strong>Post:</strong>
-  <%= @twitter.post %>
-</p>
-
-<p>
-  <strong>Bencana:</strong>
-  <%= @twitter.bencana %>
-</p>
-
-<%= link_to 'Edit', edit_twitter_path(@twitter) %> |
-<%= link_to 'Back', twitters_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          <%= link_to 'Edit', edit_twitter_path(@twitter) %> |
+          <%= link_to 'Back', twitters_path %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <strong>Tanggal:</strong>
+              <%= @twitter.tanggal %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Post:</strong>
+              <%= @twitter.post %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Bencana:</strong>
+              <%= @twitter.bencana.nama %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

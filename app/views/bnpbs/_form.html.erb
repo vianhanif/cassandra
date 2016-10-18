@@ -1,17 +1,25 @@
 <%= simple_form_for(@bnpb) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :tanggal %>
-    <%= f.association :bencana %>
-    <%= f.association :kabupaten %>
-    <%= f.input :korban_meninggal %>
-    <%= f.input :korban_hilang %>
-    <%= f.input :korban_luka %>
-    <%= f.input :korban_mengungsi %>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'form/error', form: @bnpb %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <%= render('form/input', form: f, width: 12, caption: 'Tanggal', name: :tanggal, type: 'date'); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Bencana', name: :bencana, type: 'select', select: :nama, value: :bencana); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Kabupaten', name: :kabupaten, type: 'select', select: :nama, value: :kabupaten); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Korban Meninggal', name: :korban_meninggal, type: 'number'); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Korban Hilang', name: :korban_hilang, type: 'number'); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Korban Luka', name: :korban_luka, type: 'number'); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Korban Mengungsi', name: :korban_mengungsi, type: 'number'); %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="panel-footer text-right">
+    <button type="submit" class="btn btn-default">Submit</button>
   </div>
 <% end %>

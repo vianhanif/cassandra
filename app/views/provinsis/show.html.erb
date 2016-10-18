@@ -1,9 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nama:</strong>
-  <%= @provinsi.nama %>
-</p>
-
-<%= link_to 'Edit', edit_provinsi_path(@provinsi) %> |
-<%= link_to 'Back', provinsis_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          <%= link_to 'Edit', edit_provinsi_path(@provinsi) %> |
+          <%= link_to 'Back', provinsis_path %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <strong>Nama:</strong>
+              <%= @provinsi.nama %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

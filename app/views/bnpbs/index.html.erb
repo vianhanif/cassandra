@@ -1,44 +1,57 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          Bencanas
+          <%= link_to 'New BNPB', new_bnpb_path, class: 'pull-right' %>
+        </div>
+        <div class="panel-body table-responsive">
+          <%= form_tag import_bnpbs_path, multipart: true do %>
+          <ul class="list-inline">
+            <li>  <%= file_field_tag :file %></li>
+            <li style="transform: translateX(-90px);"><%= submit_tag "Import Data", class: 'btn btn-default'%></li>
+          </ul>
+          <% end %>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Bencana</th>
+                <th>Kabupaten</th>
+                <th>Korban meninggal</th>
+                <th>Korban hilang</th>
+                <th>Korban luka</th>
+                <th>Korban mengungsi</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
 
-<h2>Import Products</h2>
-<%= form_tag import_bnpbs_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
-<h1>Bnpbs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tanggal</th>
-      <th>Bencana</th>
-      <th>Kabupaten</th>
-      <th>Korban meninggal</th>
-      <th>Korban hilang</th>
-      <th>Korban luka</th>
-      <th>Korban mengungsi</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bnpbs.each do |bnpb| %>
-      <tr>
-        <td><%= bnpb.tanggal %></td>
-        <td><%= bnpb.bencana %></td>
-        <td><%= bnpb.kabupaten %></td>
-        <td><%= bnpb.korban_meninggal %></td>
-        <td><%= bnpb.korban_hilang %></td>
-        <td><%= bnpb.korban_luka %></td>
-        <td><%= bnpb.korban_mengungsi %></td>
-        <td><%= link_to 'Show', bnpb %></td>
-        <td><%= link_to 'Edit', edit_bnpb_path(bnpb) %></td>
-        <td><%= link_to 'Destroy', bnpb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Bnpb', new_bnpb_path %>
+            <tbody>
+              <% @bnpbs.each do |bnpb| %>
+                <tr>
+                  <td><%= bnpb.tanggal %></td>
+                  <td><%= bnpb.bencana.nama %></td>
+                  <td><%= bnpb.kabupaten.nama %></td>
+                  <td><%= bnpb.korban_meninggal %></td>
+                  <td><%= bnpb.korban_hilang %></td>
+                  <td><%= bnpb.korban_luka %></td>
+                  <td><%= bnpb.korban_mengungsi %></td>
+                  <td><%= link_to 'Show', bnpb %></td>
+                  <td><%= link_to 'Edit', edit_bnpb_path(bnpb) %></td>
+                  <td><%= link_to 'Destroy', bnpb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= will_paginate @bnpbs %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,10 @@
-<h1>New Kabupaten</h1>
-
-<%= render 'form', kabupaten: @kabupaten %>
-
-<%= link_to 'Back', kabupatens_path %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-default panel-admin" style="margin-top:150px;">
+      <div class="panel-heading">
+        <%= link_to 'Back', kabupatens_path %>
+      </div>
+      <%= render 'form', kabupaten: @kabupaten %>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,10 @@
-<h1>New Sosialmedia</h1>
-
-<%= render 'form', sosialmedia: @sosialmedia %>
-
-<%= link_to 'Back', sosialmedias_path %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default panel-admin" style="margin-top:150px;">
+      <div class="panel-heading">
+        <%= link_to 'Back', sosialmedias_path %>
+      </div>
+      <%= render 'form', sosialmedia: @sosialmedia %>
+    </div>
+  </div>
+</div>

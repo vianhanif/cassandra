@@ -1,20 +1,29 @@
+
 <%= simple_form_for(@pola) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :bnpb %>
-    <%= f.input :h1 %>
-    <%= f.input :h2 %>
-    <%= f.input :h3 %>
-    <%= f.input :h4 %>
-    <%= f.input :h5 %>
-    <%= f.input :h6 %>
-    <%= f.input :h7 %>
-    <%= f.input :polanya %>
-    <%= f.input :keterangan %>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'form/error', form: @pola %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <%= render('form/input', form: f, width: 12, caption: 'BNPB', name: :bnpb); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H1', name: :h1); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H2', name: :h2); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H3', name: :h3); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H4', name: :h4); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H5', name: :h5); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H6', name: :h6); %>
+          <%= render('form/input', form: f, width: 12, caption: 'H7', name: :h7); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Polanya', name: :polanya); %>
+          <%= render('form/input', form: f, width: 12, caption: 'Keterangan', name: :keterangan, type: 'textarea'); %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="panel-footer text-right">
+    <button type="submit" class="btn btn-default">Submit</button>
   </div>
 <% end %>

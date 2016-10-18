@@ -17,3 +17,34 @@
 
 <%= link_to 'Edit', edit_sosialmedia_path(@sosialmedia) %> |
 <%= link_to 'Back', sosialmedias_path %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          <%= link_to 'Edit', edit_sosialmedia_path(@sosialmedia) %> |
+          <%= link_to 'Back', sosialmedias_path %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <strong>Tanggal:</strong>
+              <%= @sosialmedia.tanggal %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Link:</strong>
+              <%= @sosialmedia.link %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Bencana:</strong>
+              <%= @sosialmedia.bencana.nama %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

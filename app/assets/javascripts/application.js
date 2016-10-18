@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require fancybox
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
-//= require turbolinks
+//= require bootstrap-datepicker
+//= require cocoon
+//= require jasny-bootstrap.min
 //= require_tree .

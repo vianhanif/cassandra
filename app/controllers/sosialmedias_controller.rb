@@ -9,7 +9,7 @@ class SosialmediasController < ApplicationController
   # GET /sosialmedias
   # GET /sosialmedias.json
   def index
-    @sosialmedias = Sosialmedia.all
+    @sosialmedias = Sosialmedia.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /sosialmedias/1
