@@ -50,7 +50,7 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <div id="wrapper" style="margin-top:200px">
+                <!-- <div id="wrapper" style="margin-top:200px">
                 	<div id="header">
                 		<p id="txt_title">Global usage share of web browsers</p>
                 		<p id="txt_subtitle">Pure CSS3 experimental charts, no JavaScript &amp; zero image. Best viewed in Webkit browsers.</p>
@@ -123,97 +123,49 @@
                 				<li><a href="#q2_2010"><span>Q2</span><span>2010</span></a></li>
                 			</ul>
                 		</div>
-                	</div> <!--q1_2005-->
-                	</div> <!--q2_2009-->
-                	</div> <!--q3_2009-->
-                	</div> <!--q4_2009-->
-                	</div> <!--q1_2010-->
-                	</div> <!--q2_2010-->
-                </div>
-
+                	</div>
+                	</div>
+                	</div>
+                	</div>
+                	</div>
+                	</div>
+                </div> -->
+                <%= pie_chart Bnpb.group(:bencana_id).count %>
               </div>
               <div class="col-sm-3">
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Aksi terror / Sabotase</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
+                      <li><div class="pie-info" style="background-color: #3366cc"></div></li>
                       <li>Banjir</li>
                     </ul>
                     <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Banjir dan Tanah Longsor</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: brown"></div></li>
-                      <li>Gelombang Pasang / Abrasi</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Gempa Bumi</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: red"></div></li>
-                      <li>Gempa Bumi dan Tsunami</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Hama Tanaman</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: blue"></div></li>
-                      <li>Kebakaran</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Kebakaran Hutan dan Lahan</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: yellow"></div></li>
-                      <li>Kecelakaan Industri</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Kecelakaan Transportasi</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: green"></div></li>
-                      <li>Kekeringan</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Kelaparan</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: red"></div></li>
-                      <li>KLB</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Konflik/Kerusuhan Sosial</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Letusan Gunung Berapi</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: blue"></div></li>
-                      <li>Perubahan Iklim</li>
-                    </ul>
-                    <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
+                      <li><div class="pie-info" style="background-color: #dc3912"></div></li>
                       <li>Puting Beliung</li>
                     </ul>
                     <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
+                      <li><div class="pie-info" style="background-color: #ff9900"></div></li>
                       <li>Tanah Longsor</li>
                     </ul>
                     <ul class="list-inline">
-                      <li><div class="pie-info" style="background-color: grey"></div></li>
-                      <li>Tsunami</li>
+                      <li><div class="pie-info" style="background-color: #109618"></div></li>
+                      <li>Gempa Bumi</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #990099"></div></li>
+                      <li>Letusan Gunung Berapi</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #3B3EAC"></div></li>
+                      <li>Kekeringan</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #0099C6"></div></li>
+                      <li>Kebakaran Hutan dan Lahan</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #DD4477"></div></li>
+                      <li>Gelombang Pasang / Abrasi</li>
                     </ul>
                   </div>
                 </div>
