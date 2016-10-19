@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class KabupatensControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
+    # @request.env["devise.mapping"] = Devise.mappings[:user]
+    sign_in FactoryGirl.create(:user)
     @kabupaten = kabupatens(:one)
   end
 

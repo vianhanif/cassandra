@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class StasiunsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
+    # @request.env["devise.mapping"] = Devise.mappings[:user]
+    sign_in FactoryGirl.create(:user)
     @stasiun = stasiuns(:one)
   end
 

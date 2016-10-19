@@ -1,6 +1,6 @@
 class ProvinsisController < ApplicationController
   before_action :set_provinsi, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
+  before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
 
   def import
     Provinsi.import(params[:file])
