@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  resources :bencanas do 
+  resources :bencanas do
     collection { post :import }
   end
 

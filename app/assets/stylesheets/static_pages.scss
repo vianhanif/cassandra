@@ -5,14 +5,17 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 .navbar-custom {
-  background-color: #2962FF;
-  border-color: #2962FF;
+  background-color: #009688;
+  border-color: #009688;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .navbar-custom .navbar-nav > li > a {
   color: #ffffff;
+  font-size: 16px;
   &:hover,
   &:focus {
-    background: #1565C0;
+    background: #00796B;
     color: #FFFFFF;
   }
 }
@@ -20,7 +23,7 @@ body {
   color: #fff;
   &:hover,
   &:focus {
-    background-color: #1565C0;
+    background-color: #00796B;
     color: #fff;
   }
 }
@@ -47,13 +50,23 @@ h1, h4 {
 }
 
 .panel-default > .panel-heading-custom {
-  color: #fff;
-  background-color: #42A5F5;
+  color: #424242;
+  background-color: #00BFA5;
   border-color: #ddd;
 }
 
 p {
   color: #000;
+}
+
+.table > thead > tr > th {
+  vertical-align: middle;
+}
+th {
+  text-align: center;
+}
+.td-center {
+  text-align: center;
 }
 
 
