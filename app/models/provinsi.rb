@@ -1,5 +1,6 @@
 class Provinsi < ApplicationRecord
-  has_many :kabupatens
+  has_many :kabupatens, dependent: :destroy
+  has_many :stasiuns, dependent: :destroy
 
   default_scope { order('nama ASC') }
 

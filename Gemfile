@@ -12,7 +12,6 @@ gem 'jquery-turbolinks'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'cocoon'
-gem "font-awesome-rails"
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-datepicker-rails'
@@ -22,8 +21,11 @@ gem 'devise'
 gem 'will_paginate'
 gem 'fancybox2-rails'
 gem 'jasny-bootstrap-rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'factory_girl_rails'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :development do

@@ -1,5 +1,6 @@
 class KabupatensController < ApplicationController
   before_action :set_kabupaten, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
 
   def import
     Kabupaten.import(params[:file])

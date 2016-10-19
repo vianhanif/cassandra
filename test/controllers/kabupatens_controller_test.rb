@@ -19,8 +19,7 @@ class KabupatensControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Kabupaten.count') do
       post kabupatens_url, params: { kabupaten: { nama: @kabupaten.nama, provinsi_id: @kabupaten.provinsi_id } }
     end
-
-    assert_redirected_to kabupaten_url(Kabupaten.last)
+    assert_redirected_to kabupaten_url(Kabupaten.order("created_at").last)
   end
 
   test "should show kabupaten" do

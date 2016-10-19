@@ -4,6 +4,6 @@ one:
   nama: MyString
   provinsi: one
 
-two:
-  nama: MyString
-  provinsi: two
+# two:
+#   nama: MyString
+#   provinsi: two

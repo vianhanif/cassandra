@@ -20,7 +20,7 @@ class ProvinsisControllerTest < ActionDispatch::IntegrationTest
       post provinsis_url, params: { provinsi: { nama: @provinsi.nama } }
     end
 
-    assert_redirected_to provinsi_url(Provinsi.last)
+   assert_redirected_to provinsi_url(Provinsi.order("created_at").last)
   end
 
   test "should show provinsi" do

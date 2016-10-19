@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class BencanasControllerTest < ActionDispatch::IntegrationTest
+  # include Devise::Test::ControllerHelpers
+
   setup do
     @bencana = bencanas(:one)
+    # @request.env["devise.mapping"] = Devise.mappings[:admin]
+    # sign_in FactoryGirl.create(:admin)
   end
 
   test "should get index" do

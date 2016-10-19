@@ -4,8 +4,8 @@ one:
   tanggal: 2016-09-22
   link: MyString
   bencana: one
-
-two:
-  tanggal: 2016-09-22
-  link: MyString
-  bencana: two
+# 
+# two:
+#   tanggal: 2016-09-22
+#   link: MyString
+#   bencana: two
