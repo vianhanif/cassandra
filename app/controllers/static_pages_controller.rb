@@ -19,16 +19,16 @@ class StaticPagesController < ApplicationController
       provinsi = params[:provinsi][:id]
       kabupaten = params[:kabupaten][:id]
       Bnpb.all.each do |bnpb|
-        if bnpb.kabupaten.id.to_s == kabupaten.to_s and bnpb.kabupaten.provinsi.id.to_s == provinsi
+        if bnpb.kabupaten.id.to_s == kabupaten.to_s or bnpb.kabupaten.provinsi.id.to_s == provinsi
           if bnpb.tanggal.strftime("%d").to_s >= awal_tanggal.to_s and bnpb.tanggal.strftime("%d").to_s <= akhir_tanggal.to_s and bnpb.tanggal.strftime("%m").to_s >= awal_bulan.to_s and bnpb.tanggal.strftime("%m").to_s <= akhir_bulan.to_s and bnpb.tanggal.strftime("%Y").to_s >= awal_tahun.to_s and bnpb.tanggal.strftime("%Y").to_s <= akhir_tahun.to_s
             list_bnpb.push(bnpb)
           end
         end
       end
     else
-      list_bnpb = Bnpb.all;
+      list_bnpb = Bnpb.all.paginate(page: params[:page], per_page: 10);
     end
-    @bnpbs = list_bnpb.paginate(page: params[:page], per_page: 10)
+    @bnpbs = list_bnpb
   end
 
   def ramalan
