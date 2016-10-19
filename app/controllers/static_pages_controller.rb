@@ -28,7 +28,7 @@ class StaticPagesController < ApplicationController
     else
       list_bnpb = Bnpb.all;
     end
-    @bnpbs = list_bnpb.paginate(page: params[:page], per_page: 15)
+    @bnpbs = list_bnpb.paginate(page: params[:page], per_page: 10)
   end
 
   def ramalan
