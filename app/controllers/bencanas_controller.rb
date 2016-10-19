@@ -8,7 +8,7 @@ class BencanasController < ApplicationController
   # GET /bencanas
   # GET /bencanas.json
   def index
-    @bencanas = Bencana.all
+    @bencanas = Bencana.all.paginate(page: params[:page], per_page: 30)
   end
 
   # GET /bencanas/1

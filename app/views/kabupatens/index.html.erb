@@ -1,34 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          Kabupatens
+          <%= link_to 'New Kabupaten', new_kabupaten_path, class: 'pull-right' %>
+        </div>
+        <div class="panel-body table-responsive">
+          <%= form_tag import_kabupatens_path, multipart: true do %>
+          <ul class="list-inline">
+            <li>  <%= file_field_tag :file %></li>
+            <li style="transform: translateX(-90px);"><%= submit_tag "Import Data", class: 'btn btn-default'%></li>
+          </ul>
+          <% end %>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Provinsi</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
 
-<h2>Import Products</h2>
-<%= form_tag import_kabupatens_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
-<h1>Kabupatens</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nama</th>
-      <th>Provinsi</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @kabupatens.each do |kabupaten| %>
-      <tr>
-        <td><%= kabupaten.nama %></td>
-        <td><%= kabupaten.provinsi %></td>
-        <td><%= link_to 'Show', kabupaten %></td>
-        <td><%= link_to 'Edit', edit_kabupaten_path(kabupaten) %></td>
-        <td><%= link_to 'Destroy', kabupaten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Kabupaten', new_kabupaten_path %>
+            <tbody>
+              <% @kabupatens.each do |kabupaten| %>
+                <tr>
+                  <td><%= kabupaten.nama %></td>
+                  <td><%= kabupaten.provinsi.nama %></td>
+                  <td><%= link_to 'Show', kabupaten %></td>
+                  <td><%= link_to 'Edit', edit_kabupaten_path(kabupaten) %></td>
+                  <td><%= link_to 'Destroy', kabupaten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= will_paginate @kabupatens %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

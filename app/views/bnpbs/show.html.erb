@@ -1,39 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Tanggal:</strong>
-  <%= @bnpb.tanggal %>
-</p>
-
-<p>
-  <strong>Bencana:</strong>
-  <%= @bnpb.bencana %>
-</p>
-
-<p>
-  <strong>Kabupaten:</strong>
-  <%= @bnpb.kabupaten %>
-</p>
-
-<p>
-  <strong>Korban meninggal:</strong>
-  <%= @bnpb.korban_meninggal %>
-</p>
-
-<p>
-  <strong>Korban hilang:</strong>
-  <%= @bnpb.korban_hilang %>
-</p>
-
-<p>
-  <strong>Korban luka:</strong>
-  <%= @bnpb.korban_luka %>
-</p>
-
-<p>
-  <strong>Korban mengungsi:</strong>
-  <%= @bnpb.korban_mengungsi %>
-</p>
-
-<%= link_to 'Edit', edit_bnpb_path(@bnpb) %> |
-<%= link_to 'Back', bnpbs_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
+      <div class="panel panel-default panel-admin" style="margin-top:100px;">
+        <div class="panel-heading">
+          <%= link_to 'Edit', edit_bnpb_path(@bnpb) %> |
+          <%= link_to 'Back', bnpbs_path %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <strong>Tanggal:</strong>
+              <%= @bnpb.tanggal %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Bencana:</strong>
+              <%= @bnpb.bencana.nama %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Kabupaten:</strong>
+              <%= @bnpb.kabupaten.nama %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Korban meninggal:</strong>
+              <%= @bnpb.korban_meninggal %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Korban hilang:</strong>
+              <%= @bnpb.korban_hilang %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Korban luka:</strong>
+              <%= @bnpb.korban_luka %>
+            </div>
+            <div class="col-sm-12">
+              <strong>Korban mengungsi:</strong>
+              <%= @bnpb.korban_mengungsi %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

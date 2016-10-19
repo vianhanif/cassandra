@@ -1,0 +1,43 @@
+.pagination {
+  margin: 0px;
+  transform: translateX(70px);
+  span,
+  em,
+  a {
+    padding: 5px;
+  }
+  .disabled {
+    color: #d6d6d6;
+  }
+  a {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .previous_page {
+    width: 0px;
+    border: 0px;
+    visibility: collapse;
+    display: block;
+    width: 0px;
+    height: 0px;
+  }
+  .next_page {
+    width: 0px;
+    border: 0px;
+    visibility: collapse;
+    display: block;
+    width: 0px;
+    height: 0px;
+  }
+  .current {
+    font-weight: bold;
+    color: #848484;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+  }
+}
+@include web{
+  .pagination{
+    transform: translateX(0px);
+  }
+}
