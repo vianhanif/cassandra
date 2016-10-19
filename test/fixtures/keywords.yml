@@ -4,6 +4,6 @@ one:
   nama: MyString
   bencana: one
 
-two:
-  nama: MyString
-  bencana: two
+# two:
+#   nama: MyString
+#   bencana: two

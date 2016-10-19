@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class KabupatensControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
+    # @request.env["devise.mapping"] = Devise.mappings[:user]
+    sign_in FactoryGirl.create(:user)
     @kabupaten = kabupatens(:one)
   end
 
@@ -19,8 +23,7 @@ class KabupatensControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Kabupaten.count') do
       post kabupatens_url, params: { kabupaten: { nama: @kabupaten.nama, provinsi_id: @kabupaten.provinsi_id } }
     end
-
-    assert_redirected_to kabupaten_url(Kabupaten.last)
+    assert_redirected_to kabupaten_url(Kabupaten.order("created_at").last)
   end
 
   test "should show kabupaten" do

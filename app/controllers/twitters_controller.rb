@@ -1,5 +1,6 @@
 class TwittersController < ApplicationController
   before_action :set_twitter, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
 
   def import
     Twitter.import(params[:file])

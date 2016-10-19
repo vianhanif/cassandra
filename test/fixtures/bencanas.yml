@@ -2,6 +2,6 @@
 
 one:
   nama: MyString
-
-two:
-  nama: MyString
+# 
+# two:
+#   nama: MyString

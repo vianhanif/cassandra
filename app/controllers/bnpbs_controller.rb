@@ -1,5 +1,6 @@
 class BnpbsController < ApplicationController
   before_action :set_bnpb, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
 
   def import
     Bnpb.import(params[:file])

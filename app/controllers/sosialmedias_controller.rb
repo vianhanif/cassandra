@@ -1,5 +1,6 @@
 class SosialmediasController < ApplicationController
   before_action :set_sosialmedia, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:import, :new, :create, :edit, :update, :destroy, :report]
 
   def import
     Sosialmedia.import(params[:file])

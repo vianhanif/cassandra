@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :polas
   devise_for :users
 
   root 'static_pages#home'
@@ -11,6 +10,9 @@ Rails.application.routes.draw do
   get  '/info',         to: 'static_pages#info'
   get  '/about',        to: 'static_pages#about'
 
+  resources :polas do
+    collection { post :import }
+  end
   resources :stasiuns do
     collection { post :import }
   end
@@ -35,7 +37,6 @@ Rails.application.routes.draw do
   resources :provinsis do
     collection { post :import }
   end
-
   resources :bencanas do
     collection { post :import }
   end

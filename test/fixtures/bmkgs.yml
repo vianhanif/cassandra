@@ -9,11 +9,11 @@ one:
   curah_hujan: 1.5
   lama_penyinaran: 1
 
-two:
-  tanggal: 2016-09-22
-  suhu_min: 1.5
-  suhu_max: 1.5
-  suhu_rata: 1.5
-  kelembaban_rata: 1
-  curah_hujan: 1.5
-  lama_penyinaran: 1
+# two:
+#   tanggal: 2016-09-22
+#   suhu_min: 1.5
+#   suhu_max: 1.5
+#   suhu_rata: 1.5
+#   kelembaban_rata: 1
+#   curah_hujan: 1.5
+#   lama_penyinaran: 1
