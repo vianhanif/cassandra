@@ -38,12 +38,12 @@
         <div class="col-sm-12">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Berdasarkan Data yang ada, di <b><%= Provinsi.find(params[:provinsi][:id]).nama %></b> pada bulan <b><%= params[:bulan][:id] %></b>, kemungkinan bencana yang terjadi adalah :  </h3>
+              <h3 style="color:black;">Berdasarkan Data yang ada, di <b><%= Provinsi.find(params[:provinsi][:id]).nama %></b> pada bulan <b><%= params[:bulan][:id] %></b>, kemungkinan bencana yang terjadi adalah :  </h3>
               <div class="text-center">
                 <div class="row">
                   <div class="col-xs-8 col-xs-offset-2">
                     <ul class="list-inline">
-                      <li><%= fa_icon "exclamation-triangle", class: 'img-ramalan' %></li>
+                      <li style="font-size: 100px;"><%= fa_icon "exclamation-triangle", class: 'img-ramalan' %></li>
                       <li class="ramalan-text-main"><span class="big-text"> <%= ramal(params[:provinsi][:id], set_bulan(params[:bulan][:id])).nama.downcase.capitalize %> </span></li>
                   </div>
                 </div>
