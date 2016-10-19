@@ -4,8 +4,8 @@ class Bnpb < ApplicationRecord
   belongs_to :bencana
   belongs_to :kabupaten
 
-  extend FriendlyId
-  friendly_id :nama, use: :slugged
+  # extend FriendlyId
+  # friendly_id :nama, use: :slugged
 
   def name
     nama

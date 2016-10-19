@@ -42,9 +42,11 @@ module StaticPagesHelper
   				end
   			end
   		end
+      # byebug
   	end
 
   	indeks_hasil = hasil_h.max
+
   	hasil_ramalan =ramalan[indeks_hasil]
   end
 
