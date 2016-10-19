@@ -21,7 +21,7 @@ module Ramalan
             polarray << jumlah_pola
           end
     		end
-        byebug
+        # byebug
     		for i in 0..3
     			for ii in 4..7
     				for iii in 8..11

@@ -3,14 +3,15 @@
   <head>
     <title>Cassandra</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://www.google.com/jsapi" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <body>
     <%= render 'layouts/header' if !user_signed_in? %>
     <%= render 'layouts/admin_header' if user_signed_in? %>
-    <div class="container <%= user_signed_in? ? 'admin-page' : 'user-page'%>">
+    <div class="<%= user_signed_in? ? 'container admin-page' : 'user-page'%>">
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
     </div>

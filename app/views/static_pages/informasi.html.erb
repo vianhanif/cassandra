@@ -1,2 +1,99 @@
-<h1>StaticPages#informasi</h1>
-<p>Find me in app/views/static_pages/informasi.html.erb</p>
+<div class="container-fluid">
+  <div class="home-page">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <form action="/pages/page_statistik" class="form-horizontal">
+                      <h5>Layer Grafik</h5>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Jumlah Kejadian
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Meninggal
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Hilang
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Terluka
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Mengungsi
+                        </label>
+                      </div>
+                      <h5>Tahun</h5>
+                      <ul class="list-inline">
+                        <li><select class="form-control" style="width:100px"></select></li>
+                        <li>s/d</li>
+                        <li><select class="form-control" style="width:100px"></select></li>
+                      </ul>
+                      <ul class="list-inline pull-right">
+                        <li><button type="submit" class="btn btn-default">Submit</button><li>
+                        <li><button type="button" class="btn btn-default">Reset</button><li>
+                      </ul>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <%= pie_chart Bnpb.group(:bencana_id).count %>
+              </div>
+              <div class="col-sm-3">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #3366cc"></div></li>
+                      <li>Banjir</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #dc3912"></div></li>
+                      <li>Puting Beliung</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #ff9900"></div></li>
+                      <li>Tanah Longsor</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #109618"></div></li>
+                      <li>Gempa Bumi</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #990099"></div></li>
+                      <li>Letusan Gunung Berapi</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #3B3EAC"></div></li>
+                      <li>Kekeringan</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #0099C6"></div></li>
+                      <li>Kebakaran Hutan dan Lahan</li>
+                    </ul>
+                    <ul class="list-inline">
+                      <li><div class="pie-info" style="background-color: #DD4477"></div></li>
+                      <li>Gelombang Pasang / Abrasi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

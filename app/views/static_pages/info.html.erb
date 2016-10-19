@@ -1,2 +1,188 @@
-<h1>StaticPages#info</h1>
-<p>Find me in app/views/static_pages/info.html.erb</p>
+<div class="container-fluid">
+  <div class="home-page">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list-inline text-center">
+              <li>
+                <div class="hovereffect">
+                    <%= image_tag("icon-banjir.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Banjir</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-banjir" aria-expanded="false" data-parent="#accordion" class="info">
+                         Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                    <%= image_tag("icon-putingbeliung.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Puting Beliung</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-puting-beliung" aria-expanded="false" data-parent="#accordion" class="info">
+                        Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                    <%= image_tag("icon-tanahlongsor.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Tanah LOngsor</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-tanah-longsor" aria-expanded="false" data-parent="#accordion" class="info">
+                        Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                    <%= image_tag("icon-gempabumi.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Gempa Bumi</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-gempa-bumi" aria-expanded="false" data-parent="#accordion" class="info">
+                         Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                      <%= image_tag("icon-gelombangpasang.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Gelombang Pasang</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-gelombang-pasang" aria-expanded="false" data-parent="#accordion" class="info">
+                         Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                      <%= image_tag("icon-gunungberapi.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Gunung Berapi</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-letusan-gunung-berapi" aria-expanded="false" data-parent="#accordion" class="info">
+                         Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+              <li>
+                <div class="hovereffect">
+                      <%= image_tag("icon-tsunami.png", :alt => "banjir", :class => 'img-responsive img-circle list', :width => '100%') %>
+                    <div class="overlay">
+                       <h2>Tsunami</h2>
+                       <a role="button" data-toggle="collapse" href="#deskripsi-tsunami" aria-expanded="false" data-parent="#accordion" class="info">
+                         Lihat Deskripsi
+                       </a>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel-collapse collapse" id="deskripsi-banjir" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Banjir</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Banjir</strong> adalah peristiwa atau keadaan dimana terendamnya suatu daerah atau daratan
+                  karena volume air yang meningkat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-puting-beliung" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Puting Beliung</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Angin Puting Beliung</strong> adalah angin kencang yang datang secara tiba-tiba, mempunyai pusat,
+                  bergerak melingkar menyerupai spiral dengan kecepatan 40-50 km/jam
+                  hingga menyentuh permukaan bumi dan akan hilang dalam waktu singkat (3-5 menit).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-tanah-longsor" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Tanah Longsor</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Tanah Longsor</strong> merupakan salah satu jenis gerakan massa tanah atau batuan,
+                  ataupun percampuran keduanya, menuruni atau keluar lereng akibat terganggunya kestabilan tanah
+                  atau batuan penyusun lereng.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-gempa-bumi" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Gempa Bumi</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Gempa Bumi</strong>adalah getaran atau guncangan yang terjadi di permukaan bumi yang disebabkan oleh
+                  tumbukan antar lempeng bumi, patahan aktif, akitivitas gunung api atau runtuhan batuan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-gelombang-pasang" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Gelombang Pasang</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Gelombang Pasang</strong> adalah gelombang tinggi yang ditimbulkan karena efek terjadinya
+                  siklon tropis di sekitar wilayah Indonesia dan berpotensi kuat menimbulkan bencana alam. Indonesia bukan daerah lintasan siklon tropis tetapi
+                  keberadaan siklon tropis akan memberikan pengaruh kuat terjadinya angin kencang, gelombang tinggi disertai hujan deras.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-letusan-gunung-berapi" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Gunung Berapi</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Gunung Berapi</strong> merupakan bagian dari aktivitas vulkanik yang dikenal dengan istilah "erupsi". Bahaya letusan
+                  gunung api dapat berupa awan panas, lontaran material (pijar), hujan abu lebat, lava, gas racun, tsunami dan banjir lahar.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-collapse collapse" id="deskripsi-tsunami" role="tabpanel">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                <h3 class="panel-title"><strong>Deskripsi Tsunami</strong></h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Tsunami</strong> berasal dari bahasa Jepang yang berarti gelombang ombak lautan
+                  ("tsu" berarti lautan, "nami" berarti gelombang ombak). Tsunami adalah serangkaian
+                   gelombang ombak laut raksasa yang timbul karena adanya pergeseran di dasar laut akibat gempa bumi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

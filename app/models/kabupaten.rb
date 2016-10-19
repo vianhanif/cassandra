@@ -1,4 +1,5 @@
 class Kabupaten < ApplicationRecord
+  default_scope { order('nama ASC') }
   belongs_to :provinsi
 
   def self.import(file)

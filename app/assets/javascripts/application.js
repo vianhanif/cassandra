@@ -18,4 +18,6 @@
 //= require bootstrap-datepicker
 //= require cocoon
 //= require jasny-bootstrap.min
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
