@@ -70,7 +70,7 @@ GEM
     execjs (2.7.0)
     fancybox2-rails (0.2.7)
       railties (>= 3.1.0)
-    ffi (1.9.14
+    ffi (1.9.14)
     font-awesome-rails (4.5.0.1)
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
