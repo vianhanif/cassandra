@@ -18,6 +18,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem "chartkick"
 gem 'devise'
+gem "font-awesome-rails"
 gem 'will_paginate'
 gem 'fancybox2-rails'
 gem 'jasny-bootstrap-rails'
