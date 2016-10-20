@@ -55,6 +55,14 @@ h1, h4 {
   border-color: #ddd;
 }
 
+.navbar-admin-custom {
+  background-color: #009688;
+  border-color: #009688;
+}
+.navbar-admin-custom .navmenu-nav > li > a, .navbar-default .navbar-offcanvas .navmenu-nav > li > a {
+  color: white;
+}
+
 p {
   color: #000;
 }

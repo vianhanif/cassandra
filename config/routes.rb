@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   resources :provinsis do
     collection { post :import }
   end
+  
   resources :bencanas do
     collection { post :import }
   end
