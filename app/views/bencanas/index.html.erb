@@ -4,36 +4,39 @@
     <div class="col-md-12">
       <p id="notice"><%= notice %></p>
       <div class="panel panel-default panel-admin" style="margin-top:100px;">
-        <div class="panel-heading">
-          Bencanas
-          <%= link_to 'New Bencana', new_bencana_path, class: 'pull-right' %>
+        <div class="panel-heading panel-heading-custom">
+          <h4 class="panel-title">Bencana
+          <%= link_to 'New Bencana', new_bencana_path, class: 'pull-right', style: 'color: white' %>
+          </h4>
         </div>
         <div class="panel-body table-responsive">
           <%= form_tag import_bencanas_path, multipart: true do %>
           <ul class="list-inline">
             <li>  <%= file_field_tag :file %></li>
-            <li style="transform: translateX(-90px);"><%= submit_tag "Import Data", class: 'btn btn-default'%></li>
+            <li style="transform: translateX(-90px);"><%= submit_tag "Import Data", class: 'btn btn-primary', style: 'margin-left: 30px'%></li>
           </ul>
           <% end %>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Nama</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <% @bencanas.each do |bencana| %>
+          <div class="tavle-responsive">
+            <table class="table table-hover table-bordered">
+              <thead>
                 <tr>
-                  <td><%= bencana.nama %></td>
-                  <td><%= link_to 'Show', bencana %></td>
-                  <td><%= link_to 'Edit', edit_bencana_path(bencana) %></td>
-                  <td><%= link_to 'Destroy', bencana, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <th>Nama</th>
+                  <th colspan="3">Setting</th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                <% @bencanas.each do |bencana| %>
+                  <tr>
+                    <td><%= bencana.nama %></td>
+                    <td><%= link_to 'Show', bencana %></td>
+                    <td><%= link_to 'Edit', edit_bencana_path(bencana) %></td>
+                    <td><%= link_to 'Destroy', bencana, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="row">

@@ -16,7 +16,7 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-datepicker-rails'
-gem "font-awesome-rails"
+gem 'friendly_id', '~> 5.1.0'
 gem "chartkick"
 gem 'devise'
 gem 'will_paginate'
