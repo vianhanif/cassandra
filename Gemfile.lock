@@ -78,11 +78,7 @@ GEM
     fancybox2-rails (0.2.7)
       railties (>= 3.1.0)
     ffi (1.9.14)
-<<<<<<< HEAD
     font-awesome-rails (4.6.3.1)
-=======
-    font-awesome-rails (4.5.0.1)
->>>>>>> 0f256f9f0609bf091751697e821d71573e53a65f
       railties (>= 3.2, < 5.1)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
